@@ -17,19 +17,19 @@ jobs:
 
       - name: '创建python本地虚拟环境并激活'
         run: |
-          python -m venv test_14.0
+          python -m venv C:\test_14.0
           
 
       - name: '文件复制到虚拟环境并创建依赖'
         run: |
-          copy 'C:\actions-runner\_work\test\test\*' C:\Users\admin\test_14.0
+          copy 'C:\actions-runner\_work\test\test\*' C:\test_14.0
 #          pip install -r requirements.txt
 
       - name: Run test.py script and capture output
         id: run_py
         run: |
-          C:\Users\admin\test_14.0\Scripts\python.exe C:\Users\admin\test_14.0\test.py > C:\Users\admin\test_14.0\output.txt
-          output=$(type C:\Users\admin\test_14.0\output.txt)  
+          C:\test_14.0\Scripts\python.exe C:\test_14.0\test.py > C:\test_14.0\output.txt
+          output=$(type C:\test_14.0\output.txt)  
           echo "::set-output name=script_output::$output"  
 
       - name: Get the output
