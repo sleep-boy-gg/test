@@ -17,7 +17,7 @@ jobs:
 
       - name: '创建python本地虚拟环境并激活'
         run: |
-          $file = $env:XX_APP_VERSION
+          $file = "14.0"
           mkdir "c:\$file"
 #           python -m venv C:\
           
