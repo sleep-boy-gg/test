@@ -28,8 +28,8 @@ jobs:
       - name: Run test.py script and capture output
         id: run_py
         run: |
-          C:\Users\admin\test_14.0\Scripts\python test.py > output.txt  
-          output=$(type output.txt)  
+          C:\Users\admin\test_14.0\Scripts\python.exe C:\Users\admin\test_14.0\test.py > C:\Users\admin\test_14.0\output.txt
+          output=$(type C:\Users\admin\test_14.0\output.txt)  
           echo "::set-output name=script_output::$output"  
 
       - name: Get the output
