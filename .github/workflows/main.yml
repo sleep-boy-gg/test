@@ -17,9 +17,7 @@ jobs:
 
       - name: '创建python本地虚拟环境并激活'
         run: |
-          c:
           python -m venv test_$XX_APP_VERSION
-          .\test_$XX_APP_VERSION\Scripts\activate
           
 
       - name: '文件复制到虚拟环境并创建依赖'
@@ -30,7 +28,7 @@ jobs:
       - name: Run test.py script and capture output
         id: run_py
         run: |
-          python test.py > output.txt  
+          C:\Users\admin\test_$XX_APP_VERSION\Scripts\python test.py > output.txt  
           output=$(type output.txt)  
           echo "::set-output name=script_output::$output"  
 
