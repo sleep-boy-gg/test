@@ -22,7 +22,7 @@ jobs:
 
       - name: '文件复制到虚拟环境并创建依赖'
         run: |  
-          robocopy 'C:\actions-runner\_work\xx\xx\automated\test' C:\Users\admin\test_14.0 /E /COPY:DAT
+          robocopy 'C:\actions-runner\_work\test\test' C:\Users\admin\test_14.0 /E /COPY:DAT
 #          pip install -r requirements.txt
 
       - name: Run test.py script and capture output
