@@ -29,8 +29,8 @@ jobs:
         id: run_py
         run: |
           C:\test_14.0\Scripts\python.exe C:\test_14.0\test.py > C:\test_14.0\output.txt
-          $output = Get-Content C:\test_14.0\output.txt 
 
       - name: Get the output
         run: |
-          echo "The report of run.py is ${{ steps.run_py.output }}""
+          $output = Get-Content C:\test_14.0\output.txt 
+          echo "The report of run.py is $output"
