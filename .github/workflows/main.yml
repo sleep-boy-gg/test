@@ -9,7 +9,7 @@ jobs:
     runs-on: [self-hosted, tester]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: "updater: 获取版本"
         id: get_version
