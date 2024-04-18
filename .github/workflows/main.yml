@@ -13,11 +13,11 @@ jobs:
 
       - name: "updater: 获取版本"
         run: |
-          echo "XX_APP_VERSION=14.0" >> $GITHUB_ENV
+          echo "xx_app_version=14.0" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append 
 
       - name: '创建python本地虚拟环境并激活'
         run: |
-          $file = "14.0"
+          $file = $Env:xx_app_version
           mkdir "c:\$file"
 #           python -m venv C:\
           
