@@ -22,13 +22,13 @@ jobs:
 
       - name: '文件复制到虚拟环境并创建依赖'
         run: |  
-          robocopy 'C:\actions-runner\_work\xx\xx\automated\test' C:\Users\admin\test_$XX_APP_VERSION /E /COPY:DAT
+          robocopy 'C:\actions-runner\_work\xx\xx\automated\test' C:\Users\admin\test_14.0 /E /COPY:DAT
 #          pip install -r requirements.txt
 
       - name: Run test.py script and capture output
         id: run_py
         run: |
-          C:\Users\admin\test_$XX_APP_VERSION\Scripts\python test.py > output.txt  
+          C:\Users\admin\test_14.0\Scripts\python test.py > output.txt  
           output=$(type output.txt)  
           echo "::set-output name=script_output::$output"  
 
