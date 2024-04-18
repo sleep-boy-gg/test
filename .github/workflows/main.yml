@@ -17,7 +17,7 @@ jobs:
 
       - name: '创建python本地虚拟环境并激活'
         run: |
-          python -m venv test_$XX_APP_VERSION
+          python -m venv test_14.0
           
 
       - name: '文件复制到虚拟环境并创建依赖'
