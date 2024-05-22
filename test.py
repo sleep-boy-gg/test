@@ -124,7 +124,12 @@
 # # 保存截取后的图片
 # cropped_image.save(r'C:\Users\admin\Documents\GitHub\xx\automated\test\ui_png\exp_no_search_result.png')  # 保存为新的文件名
 
-print("hello world")
+# print("hello world")
+import os  
+  
+your_env_var = os.environ.get('YOUR_ENV_VAR')  
+print(your_env_var)
+
 
 
 
